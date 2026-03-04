@@ -1,0 +1,22 @@
+export type ChatProfile = {
+  name: string
+  roleLine: string
+  education: string
+  resumeUrl: string
+  contactEmail: string
+  links: { label: string; url: string }[]
+}
+
+export const chatProfile: ChatProfile = {
+  name: 'Kishan Vadsola',
+  roleLine: 'B.Tech Computer Engineering Student · Full Stack + AI',
+  education:
+    'B.Tech Computer Engineering (ongoing). Focus on DSA, OS, DBMS, Computer Networks, Software Engineering, and Machine Learning.',
+  resumeUrl: '/resume.pdf',
+  contactEmail: 'you@example.com',
+  links: [
+    { label: 'GitHub', url: '#' },
+    { label: 'LinkedIn', url: '#' },
+    { label: 'Portfolio Repo', url: '#' },
+  ],
+}

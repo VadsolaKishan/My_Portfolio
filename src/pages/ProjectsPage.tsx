@@ -1,0 +1,31 @@
+import { motion } from 'framer-motion'
+import { BackgroundTech } from '../components/backgrounds/BackgroundTech'
+import { Projects } from '../components/Projects'
+import { PageTransition } from '../components/PageTransition'
+
+export function ProjectsPage() {
+    return (
+        <PageTransition id="projects">
+            <BackgroundTech />
+            <div className="flex flex-col items-center justify-start w-full min-h-screen py-20 sm:py-24 px-4 relative z-10">
+                <div className="max-w-6xl w-full">
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-16"
+                    >
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.8)]">
+                            Projects
+                        </h1>
+                        <p className="text-blue-200 mt-4 tracking-[0.2em] uppercase text-sm font-semibold">
+                            Real-World Solutions in Code
+                        </p>
+                    </motion.div>
+
+                    <Projects />
+                </div>
+            </div>
+        </PageTransition>
+    )
+}
